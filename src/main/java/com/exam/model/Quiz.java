@@ -1,0 +1,124 @@
+package com.exam.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+public class Quiz {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long qId;
+
+
+    private String title;
+
+    @Column(length = 5000)
+    private String description;
+
+    private String maxMarks;
+
+    private String numberOfQuestions;
+
+    private boolean active = false;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Subject subject;
+
+    private Long maxDuration;  //in minutes
+
+    @OneToMany(mappedBy = "quiz", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Question> questions = new HashSet<>();
+
+
+    @OneToMany(mappedBy = "quiz", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Attempt> attempt = new HashSet<>();
+
+
+    public Quiz() {
+    }
+
+    public Long getMaxDuration() {
+        return maxDuration;
+    }
+
+    public void setMaxDuration(Long maxDuration) {
+        this.maxDuration = maxDuration;
+    }
+
+    public Set<Attempt> getAttempt() {
+        return attempt;
+    }
+
+    public void setAttempt(Set<Attempt> attempt) {
+        this.attempt = attempt;
+    }
+
+    public Long getqId() {
+        return qId;
+    }
+
+    public void setqId(Long qId) {
+        this.qId = qId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getMaxMarks() {
+        return maxMarks;
+    }
+
+    public void setMaxMarks(String maxMarks) {
+        this.maxMarks = maxMarks;
+    }
+
+    public String getNumberOfQuestions() {
+        return numberOfQuestions;
+    }
+
+    public void setNumberOfQuestions(String numberOfQuestions) {
+        this.numberOfQuestions = numberOfQuestions;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
+    }
+
+    public Set<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(Set<Question> questions) {
+        this.questions = questions;
+    }
+}
