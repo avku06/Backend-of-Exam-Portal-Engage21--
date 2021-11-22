@@ -15,19 +15,19 @@ public class SubjectController {
     @Autowired
     private SubjectService subjectService;
 
-    //add category
+    //add subject
     @PostMapping("/")
     public Subject addSubject (@RequestBody Subject sub) throws Exception {
         return this.subjectService.addSubject(sub);
     }
 
-    //get category
+    //get subject
     @GetMapping("/{subjectId}")
     public ResponseEntity<Subject> getSubject(@PathVariable("subjectId") Long subId) {
         return ResponseEntity.ok(this.subjectService.getSubject(subId));
     }
 
-    //get all categories
+    //get all subjects
     @GetMapping("/")
     public ResponseEntity<?> getSubjects() {
         return ResponseEntity.ok(this.subjectService.getSubjects());
@@ -38,13 +38,13 @@ public class SubjectController {
         return ResponseEntity.ok(this.subjectService.getSubjects());
     }
 
-    //update category
+    //update subject
     @PutMapping("/")
     public ResponseEntity<?> updateSubject(@RequestBody Subject sub) {
         return ResponseEntity.ok(this.subjectService.updateSubject(sub));
     }
 
-    //delete category
+    //delete subject
     @DeleteMapping("/{subId}")
     public void deleteSubject(@PathVariable("subId") Long subId) {
         this.subjectService.deleteSubject(subId);

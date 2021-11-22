@@ -2,7 +2,6 @@ package com.exam.controller;
 
 import com.exam.model.Question;
 import com.exam.model.Quiz;
-import com.exam.model.Subject;
 import com.exam.service.QuestionService;
 import com.exam.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,7 +73,7 @@ public class QuestionController {
     //eval quiz
     @PostMapping("/eval-quiz")
     public ResponseEntity<?> evalQuiz(@RequestBody List<Question> questions) {
-        System.out.println(questions);
+
         double marksGot = 0;
         int correctAnswers = 0;
         int attempted = 0;
@@ -98,7 +97,6 @@ public class QuestionController {
         ;
 
         HashMap<String, Object> map = new HashMap<>() ;
-//        Map.of("marksGot", marksGot, "correctAnswers", correctAnswers, "attempted", attempted);
         map.put("marksGot",marksGot);
         map.put("correctAnswers",correctAnswers);
         map.put("attempted",attempted);

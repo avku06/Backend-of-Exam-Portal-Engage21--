@@ -1,7 +1,6 @@
 package com.exam.service;
 
 import com.exam.model.Attempt;
-import com.exam.model.Question;
 import com.exam.model.Quiz;
 import com.exam.model.User;
 import com.exam.repo.AttemptRepository;

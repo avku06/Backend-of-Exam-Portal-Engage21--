@@ -1,9 +1,7 @@
 package com.exam.service;
 
 import com.exam.helper.SubjectFoundException;
-import com.exam.helper.UserFoundException;
 import com.exam.model.Subject;
-import com.exam.model.User;
 import com.exam.repo.SubjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

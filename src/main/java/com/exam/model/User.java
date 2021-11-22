@@ -42,7 +42,6 @@ public class User implements UserDetails {
     public void setBranch(String branch) {
         this.branch = branch;
     }
-//user many roles
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
     @JsonIgnore
