@@ -1,7 +1,7 @@
-# Microsoft Engage 2021 Project : Online Exam Portal 
+# Microsoft Engage 2021 Project : Online Exam Portal
 
-### Frontend with Angular 
-Github Repository for Online Exam Portal [ Frontend Code ](https://github.com/pearlgupta2000/Frontend-of-Exam-Portal-Engage21-) 
+### Frontend with Angular
+Github Repository for Online Exam Portal [ Frontend Code ](https://github.com/pearlgupta2000/Frontend-of-Exam-Portal-Engage21-)
 
 ### Backend with Springboot
 Github Repository for Online Exam Portal [ Backend Code ](https://github.com/pearlgupta2000/Backend-of-Exam-Portal-Engage21--)
@@ -15,18 +15,20 @@ Github Repository for Online Exam Portal [ Backend Code ](https://github.com/pea
 1. Create a New Folder and clone both Frontend and Backend Repositories inside that folder.
 
 2. Open cmd, go inside the frontend folder and execute following commands : <br>
-  a). `npm install -g @angular/cli` (node.js should be installed before executing commands) <br>
-  b). `npm install --scripts-prepend-node-path=auto` <br>
-  c). `ng serve` <br>
+   a). `npm install -g @angular/cli` (node.js should be installed before executing commands) <br>
+   b). `npm install --scripts-prepend-node-path=auto` <br>
+   c). `ng serve` <br>
 
 Frontend angular application started at `http://localhost:4200/`
 
 3. Open MySQL Workbench and create a new database by executing `create database database_name`.
 
 4. Open the backend folder and change database connection details in `/src/main/resources/application.properties` file. <br>
-  a). spring.datasource.url = jdbc:mysql://localhost:3306/`your database name`?serverTimezone=UTC <br>
-  b). spring.datasource.username = `root` <br>
-  c). spring.datasource.password = `password` <br>
+   a). spring.datasource.url = jdbc:mysql://localhost:3306/`your database name`?serverTimezone=UTC <br>
+   b). spring.datasource.username = `root` <br>
+   c). spring.datasource.password = `password` <br>
+
+5. Run the backend application by clicking on Run Application.
 
 Backend Springboot application started at `http://localhost:8080/`
 
@@ -40,4 +42,4 @@ Donot change any frontend file by mistake because the app will automatically rel
 Angular CLI: 13.0.3<br>
 Node: 16.13.0<br>
 Package Manager: npm 8.1.0<br>
-
+java version "1.8.0_301"
