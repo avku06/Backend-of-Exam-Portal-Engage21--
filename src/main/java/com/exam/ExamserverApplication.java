@@ -33,13 +33,14 @@ public class ExamserverApplication implements CommandLineRunner {
 
         try {
             System.out.println("starting code");
-            User user = new User();
 
-            user.setFirstName("Pearl");
-            user.setLastName("Gupta");
-            user.setUsername("pearlgupta2891");
-            user.setPassword(this.bCryptPasswordEncoder.encode("pearl"));
-            user.setEmail("pearlgupta2000@gmail.com");
+            //Admin is created with following details
+            User user = new User();
+            user.setFirstName("Admin");
+            user.setLastName("lastname");
+            user.setUsername("admin123");
+            user.setPassword(this.bCryptPasswordEncoder.encode("admin"));
+            user.setEmail("admin123@gmail.com");
             user.setProfile("def.png");
 
             Role rol = new Role();
