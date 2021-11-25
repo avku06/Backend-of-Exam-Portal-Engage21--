@@ -50,7 +50,7 @@ Donot change any frontend file by mistake because the app will automatically rel
 Angular CLI: 13.0.3<br>
 Node: 16.13.0<br>
 Package Manager: npm 8.1.0<br>
-java version "1.8.0_301"
+java version "1.8.0_301" <br>
 javac 1.8.0_301 
 
 ---
