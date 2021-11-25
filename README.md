@@ -8,7 +8,7 @@ Github Repository for Online Exam Portal [ Backend Code ](https://github.com/pea
 
 ### MySQL Database Used
 
---
+---
 
 ## Requirements with given Versions 
 
